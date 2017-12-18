@@ -1,4 +1,4 @@
-package com.hackerearth.decembercircuit17;
+package com.java.hackerearth.decembercircuit17;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class TwoArrays {
         int N = sc.nextInt();
         int M = sc.nextInt();
         int k = sc.nextInt();
-        
+
         sc.close();
     }
 }

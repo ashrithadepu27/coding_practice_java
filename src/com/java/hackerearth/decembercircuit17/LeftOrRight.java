@@ -1,4 +1,4 @@
-package com.hackerearth.decembercircuit17;
+package com.java.hackerearth.decembercircuit17;
 
 import java.util.Scanner;
 import java.util.ArrayList;
