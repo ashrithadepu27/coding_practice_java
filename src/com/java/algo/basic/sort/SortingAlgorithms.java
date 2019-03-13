@@ -1,14 +1,23 @@
 package com.java.algo.basic.sort;
 
+import com.java.timer.Timer;
+
+import java.util.Random;
+
 public class SortingAlgorithms {
 
+	private static int[] arrayToSort = new Random().ints(100000).toArray();
+
 	public static void main(String args[])	{
-		
+
+		Timer timer = new Timer();
+		int i = 100;
+		timer.setNoOfIteration(i);
 		System.out.print("Input Array: ");		
-		printArray(inputArray());
+		printArray(arrayToSort);
 		System.out.println();
-		long startTime, timeDuration;
-		
+
+
 		// Sorting Algorithms Object
 		BubbleSort bs = new BubbleSort();
 		HeapSort hs = new HeapSort();
@@ -18,74 +27,94 @@ public class SortingAlgorithms {
 		SelectionSort ss = new SelectionSort();
 		
 		// Bubble Sort
-		startTime = System.currentTimeMillis();
-		int[] bubbleSortedArr = bs.sort(inputArray());	
-		timeDuration = (System.currentTimeMillis() - startTime); 
+		timer.start();
+		int[] bubbleSortedArr = new int[arrayToSort.length];
+		while(i > 0 ) {
+			bubbleSortedArr = bs.sort(arrayToSort);
+			i--;
+		}
+		timer.end();
 		System.out.print("Bubble Sort: ");
 		printArray(bubbleSortedArr);
-		System.out.println("Time taken to sort(ms): " + timeDuration);
+		System.out.println(timer);
 		System.out.println();
 		
 		// Heap Sort
-		startTime = System.currentTimeMillis();
-		int[] heapSortedArr = hs.sort(inputArray());	
-		timeDuration = (System.currentTimeMillis() - startTime); 
+		timer.start();
+		int[] heapSortedArr = new int[arrayToSort.length];
+		i = 100;
+		while(i > 0) {
+			heapSortedArr= hs.sort(arrayToSort);
+			i--;
+		}
+		timer.end();
 		System.out.print("Heap Sort: ");
 		printArray(heapSortedArr);
-		System.out.println("Time taken to sort(ms): " + timeDuration);
+		System.out.println(timer);
 		System.out.println();
-		
+
 		// Insertion Sort
-		startTime = System.currentTimeMillis();
-		int[] insertionSortedArr = is.sort(inputArray());	
-		timeDuration = (System.currentTimeMillis() - startTime); 
+		timer.start();
+		int[] insertionSortedArr = new int[arrayToSort.length];
+		i = 100;
+		while(i > 0) {
+			insertionSortedArr= is.sort(arrayToSort);
+			i--;
+		}
+		timer.end();
 		System.out.print("Insertion Sort: ");
 		printArray(insertionSortedArr);
-		System.out.println("Time taken to sort(ms): " + timeDuration);
+		System.out.println(timer);
 		System.out.println();
-		
+
 		// Merge Sort
-		startTime = System.currentTimeMillis();
-		int[] mergeSortedArr = ms.sort(inputArray());	
-		timeDuration = (System.currentTimeMillis() - startTime); 
+		timer.start();
+		int[] mergeSortedArr = new int[arrayToSort.length];
+		i = 100;
+		while(i > 0) {
+			mergeSortedArr= ms.sort(arrayToSort);
+			i--;
+		}
+		timer.end();
 		System.out.print("Merge Sort: ");
 		printArray(mergeSortedArr);
-		System.out.println("Time taken to sort(ms): " + timeDuration);
+		System.out.println(timer);
 		System.out.println();
-		
+
 		// Quick Sort
-		startTime = System.currentTimeMillis();
-		int[] quickSortedArr = qs.sort(inputArray());	
-		timeDuration = (System.currentTimeMillis() - startTime); 
+		timer.start();
+		int[] quickSortedArr = new int[arrayToSort.length];
+		i = 100;
+		while(i > 0) {
+			quickSortedArr= qs.sort(arrayToSort);
+			i--;
+		}
+		timer.end();
 		System.out.print("Quick Sort: ");
 		printArray(quickSortedArr);
-		System.out.println("Time taken to sort(ms): " + timeDuration);
+		System.out.println(timer);
 		System.out.println();
-		
+
 		// Selection Sort
-		startTime = System.currentTimeMillis();
-		int[] selectionSortedArr = ss.sort(inputArray());	
-		timeDuration = (System.currentTimeMillis() - startTime); 
+		timer.start();
+		int[] selectionSortedArr = new int[arrayToSort.length];
+		i = 100;
+		while(i > 0) {
+			selectionSortedArr= ss.sort(arrayToSort);
+			i--;
+		}
+		timer.end();
 		System.out.print("Selection Sort: ");
 		printArray(selectionSortedArr);
-		System.out.println("Time taken to sort(ms): " + timeDuration);
+		System.out.println(timer);
 		System.out.println();
 		
 	}
 	
 	public static void printArray(int a[])	{
-		for(int i = 0; i < a.length; i++)	{
-			System.out.print(a[i] +"  ");
-		}
-		System.out.println();
-	}
-	
-	public static int[] inputArray()	{
-		int[] arr = {35, 12, 36, 13, 51, 
-				 23, 75, 3, 45, 21, 
-				 16, 95, 40, 54, 27, 
-				 84, 1, 43, 92, 66,
-				 69, 10, 14, 8 ,7};
-		return arr;
+//		for(int i = 0; i < a.length; i++)	{
+//			System.out.print(a[i] +"  ");
+//		}
+//		System.out.println();
 	}
 }

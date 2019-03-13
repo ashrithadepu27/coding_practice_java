@@ -1,7 +1,10 @@
 package com.java.algo.basic.sort;
 
+import java.util.Random;
+
 public class QuickSort{
 
+	Random random = new Random();
 	public int[] sort(int[] arr) {
 		
 		return quicksort(arr, 0, arr.length-1);
@@ -18,6 +21,9 @@ public class QuickSort{
 	}
 
 	private int partition(int[] arr, int p, int r) {
+
+		int index = p + random.nextInt(r - p);
+		swap(arr, index, r);
 		int x = arr[r];
 		int i = p - 1, temp;
 		for(int j = p; j <= r-1; j++)	{
@@ -32,6 +38,12 @@ public class QuickSort{
 		arr[i+1] = arr[r];
 		arr[r] = temp;
 		return i+1;
+	}
+
+	void swap(int[] arr, int i, int j) {
+		int temp = arr[j];
+		arr[j] = arr[i];
+		arr[i] = temp;
 	}
 
 }
