@@ -48,8 +48,8 @@ public class HeapSort {
 	}
 	
 	public static void printArray(int a[])	{
-		for(int i = 0; i < a.length; i++)	{
-			System.out.print(a[i] +"  ");
+		for(int i : a)	{
+			System.out.print(i + "  ");
 		}
 		System.out.println();
 	}
