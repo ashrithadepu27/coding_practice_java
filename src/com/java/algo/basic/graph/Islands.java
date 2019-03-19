@@ -76,7 +76,17 @@ public class Islands {
                 {1, 1, 0, 0, 0},
                 {0, 0, 0, 0, 0}
         };
-        Islands t = new Islands();
-        System.out.println("Number of islands is: "+ t.countIslands(M));
+        int O[][] = new int[][]{
+                {0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
+                {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}
+        };
+        Islands t = new Islands(4);
+        System.out.println("Number of islands is: "+ t.countIslands(O));
     }
 }
