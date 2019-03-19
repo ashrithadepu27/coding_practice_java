@@ -24,7 +24,7 @@ public class Islands {
         }
     }
 
-    private int countIslands(int[][] island) {
+    public int countIslands(int[][] island) {
         int noOfIslands = 0;
         int n = island.length, m = n == 0 ? 0 : island[0].length;
         int maxArea = 0;
@@ -60,33 +60,5 @@ public class Islands {
         if(row >= N || row < 0 || col < 0 || col >= M)
             return false;
         return !isVisited[row][col] && island[row][col] == 1;
-    }
-
-    public static void main(String[] args) {
-        int M[][]=  new int[][] {
-                {1, 1, 0, 0, 0},
-                {0, 1, 0, 0, 1},
-                {1, 0, 0, 1, 1},
-                {0, 0, 0, 0, 0},
-                {1, 0, 1, 0, 1}
-        };
-        int N[][]=  new int[][] {
-                {1, 1, 1, 1, 0},
-                {1, 1, 0, 1, 0},
-                {1, 1, 0, 0, 0},
-                {0, 0, 0, 0, 0}
-        };
-        int O[][] = new int[][]{
-                {0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-                {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
-                {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}
-        };
-        Islands t = new Islands(4);
-        System.out.println("Number of islands is: "+ t.countIslands(O));
     }
 }
