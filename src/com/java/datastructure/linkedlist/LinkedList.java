@@ -1,48 +1,10 @@
 package com.java.datastructure.linkedlist;
 
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class LinkedList<T extends Comparable<? super T>> {
-
-    class Node<T extends Comparable<? super T>> {
-
-        private T data;
-        private Node<T> next;
-
-
-        Node(T data) {
-            this.data = data;
-            this.next = null;
-        }
-
-        Node(T data, Node<T> next) {
-            this.data = data;
-            this.next = next;
-        }
-
-        public void setElement(T data) {
-            this.data = data;
-        }
-
-        public T getElement() {
-            return data;
-        }
-
-        public Node<T> getNext() {
-            return next;
-        }
-
-        public void setNext(Node<T> next) {
-            this.next = next;
-        }
-
-        public int compareTo(T o) {
-            return (this.data).compareTo(o);
-        }
-    }
 
     Node<T> head, tail;
     int size;
