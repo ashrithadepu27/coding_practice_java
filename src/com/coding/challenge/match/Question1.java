@@ -2,7 +2,6 @@ package com.coding.challenge.match;
 
 import java.io.*;
 import java.net.*;
-import com.google.gson.*;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -48,13 +47,14 @@ public class Question1 {
      * @return content of the text JSON attribute
      */
     static String getTextContent(String s) {
-        try {
-            JsonParser parser = new JsonParser();
-            JsonObject res = (JsonObject) parser.parse(s);
-            return res.getAsJsonObject("parse").getAsJsonObject("text").get("*").toString();
-        } catch(Exception ex) {
-            return null;
-        }
+//        try {
+//            JsonParser parser = new JsonParser();
+//            JsonObject res = (JsonObject) parser.parse(s);
+//            return res.getAsJsonObject("parse").getAsJsonObject("text").get("*").toString();
+//        } catch(Exception ex) {
+//            return null;
+//        }
+        return null;
     }
 
     /**
