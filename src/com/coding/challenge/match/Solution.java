@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.net.*;
-import com.google.gson.*;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -73,15 +72,16 @@ public class Solution {
     }
 
     private static String getTextContent(String s) {
-        try {
-            JsonParser parser = new JsonParser();
-            JsonObject res = (JsonObject) parser.parse(s);
-            if(res.getAsJsonArray("data").size() == 0)  return null;
-            JsonObject stockInfo = res.getAsJsonArray("data").get(0).getAsJsonObject();
-            return stockInfo.get("open").toString() + " " + stockInfo.get("close").toString();
-        } catch (Exception ex) {
-            return null;
-        }
+//        try {
+//            JsonParser parser = new JsonParser();
+//            JsonObject res = (JsonObject) parser.parse(s);
+//            if(res.getAsJsonArray("data").size() == 0)  return null;
+//            JsonObject stockInfo = res.getAsJsonArray("data").get(0).getAsJsonObject();
+//            return stockInfo.get("open").toString() + " " + stockInfo.get("close").toString();
+//        } catch (Exception ex) {
+//            return null;
+//        }
+        return null;
     }
 
     public static void main(String[] args) {

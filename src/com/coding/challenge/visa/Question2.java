@@ -38,31 +38,6 @@ public class Question2 {
 
     }
 
-//    public static void findCombination(int[] res, int num, int reducenum, int spaceCount, int index, List<List<Integer>> finalRes) {
-//
-//        if(reducenum<0) {
-//            return;
-//        }
-//        if(reducenum == 0) {
-//            List<Integer> lst = new LinkedList<>();
-//            for(int i: res) {
-//                lst.add(i);
-//            }
-//            finalRes.add(lst);
-//            return;
-//        }
-//        if(index == spaceCount) {
-//            return;
-//        }
-//        for(int i=0; i<num+1; i++) {
-//            res[index] = i;
-//            findCombination(res, num, reducenum-i, spaceCount, index+1, finalRes);
-//            res[index] = 0;
-//        }
-//
-//        return ;
-//    }
-
     private static void calculateAllPossibilities(List<List<Integer>> allPossibility, int dayHours, int remainingHours, int dayAvailable, int[] p, int index) {
 
         if(remainingHours < 0) return;

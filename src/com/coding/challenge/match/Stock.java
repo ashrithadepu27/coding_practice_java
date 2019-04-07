@@ -1,13 +1,12 @@
-package com.coding.practice.misc;
+package com.coding.challenge.match;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.net.*;
-import com.google.gson.*;
 import javax.net.ssl.HttpsURLConnection;
 
-public class Solution {
+public class Stock {
     /*
      * Complete the function below.
      * Base query: https://jsonmock.hackerrank.com/api/stocks
@@ -68,15 +67,15 @@ public class Solution {
     }
 
     private static String getTextContent(String s) {
-        try {
-            JsonParser parser = new JsonParser();
-            JsonObject res = (JsonObject) parser.parse(s);
-            if(res.getAsJsonArray("data").size() == 0) return null;
-            JsonObject data = res.getAsJsonArray("data").get(0).getAsJsonObject();
-            return data.get("open").toString() + " " + data.get("close").toString();
-        } catch (Exception ex) {
+//        try {
+//            JsonParser parser = new JsonParser();
+//            JsonObject res = (JsonObject) parser.parse(s);
+//            if(res.getAsJsonArray("data").size() == 0) return null;
+//            JsonObject data = res.getAsJsonArray("data").get(0).getAsJsonObject();
+//            return data.get("open").toString() + " " + data.get("close").toString();
+//        } catch (Exception ex) {
             return null;
-        }
+//        }
     }
 
     public static void main(String[] args) {
